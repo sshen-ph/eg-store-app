@@ -1,0 +1,26 @@
+<script src="https://ui.powerreviews.com/stable/4.1/ui.js" async></script>
+<div id="pr-write"></div>
+<script>
+  window.pwr = window.pwr || function () {
+    (pwr.q = pwr.q || []).push(arguments); 
+  };
+   pwr("render", {
+    api_key: '<API KEY>',
+    locale: '<LOCALE>',
+    merchant_group_id: '<GROUP ID>',
+    merchant_id: '<MERCHANT ID>',
+    on_submit:function(config, data){
+         window.scrollTo(0,0); 
+     },
+    components: {
+      Write: 'pr-write'
+    }
+  });
+</script>
+{% schema %}
+{
+  "name": "PWR WAR",
+  "target": "section",
+  "settings": []
+}
+{% endschema %}
