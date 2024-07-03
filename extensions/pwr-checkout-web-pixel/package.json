@@ -1,5 +1,5 @@
 {
-  "name": "pwr-checkout-beacon",
+  "name": "pwr-checkout-web-pixel",
   "version": "1.0.0",
   "main": "dist/main.js",
   "license": "UNLICENSED",
