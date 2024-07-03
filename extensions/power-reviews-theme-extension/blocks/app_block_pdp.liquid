@@ -20,13 +20,13 @@
    pwr("render", {
   api_key: "{{ section.settings.api_key }}",
   locale: "{{ section.settings.locale }}",
-  merchant_group_id: "{{ section.settings.group_id }}",
+  merchant_group_id: "{{ section.settings.merchant_group_id }}",
   merchant_id: "{{ section.settings.merchant_id }}",
   page_id: "{{ product.id }}",
-  review_wrapper_url: "https://<STORE>.myshopify.com/pages/write-a-review/?pr_page_id={{ product.id }}",
+  review_wrapper_url: "{{ shop.url }}/pages/write-a-review/?pr_page_id={{ product.id }}",
   product: {
   	name: "{{ product.title | replace: "+", " " }}",
-  	url: "https://<STORE>.myshopify.com{{ product.url }}",
+  	url: "{{ shop.url }}{{ product.url }}",
   	image_url: "https:{{ product.featured_image | image_url: "large" }}",
   	description: "{{ product.description | strip_html | strip_newlines | replace: "%0A", "%20" | replace: '"', '%27' | escape }}",
   	category_name: {% if product.type != '' %}"{{ product.type }}"{% else %} "Default" {% endif %},
@@ -70,8 +70,8 @@
     },
     {
       "type": "text",
-      "id": "group_id",
-      "label": "Group ID",
+      "id": "merchant_group_id",
+      "label": "Merchant Group ID",
 	  "default": "Enter text here"
     },
     {

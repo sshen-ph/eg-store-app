@@ -7,7 +7,7 @@
    pwr("render", {
     api_key: '{{ section.settings.api_key }}',
     locale: '{{ section.settings.locale }}',
-    merchant_group_id: '{{ section.settings.group_id }}',
+    merchant_group_id: '{{ section.settings.merchant_group_id }}',
     merchant_id: '{{ section.settings.merchant_id }}',
     on_submit:function(config, data){
          window.scrollTo(0,0); 
@@ -36,8 +36,8 @@
     },
     {
       "type": "text",
-      "id": "group_id",
-      "label": "Group ID",
+      "id": "merchant_group_id",
+      "label": "Merchant Group ID",
       "default": "Enter text here"
     },
     {
